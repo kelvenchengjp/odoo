@@ -17,5 +17,4 @@ RUN apt-get update && \
 USER odoo
 
 # Use odoo user to entry system
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["odoo"]
+CMD python /home/odoo/src/odoo/odoo-bin --database=$DB_NAME --db_host=$DB_HOST --db_port=5432 --db_user=$DB_USER --db_password=$POSTGRES_PASSWORD --http-port=$PORT
