@@ -17,4 +17,4 @@ RUN apt-get update && \
 USER odoo
 
 # Use odoo user to entry system
-CMD odoo --database=$DB_NAME --db_host=$DB_HOST --db_port=5432 --db_user=$DB_USER --db_password=$POSTGRES_PASSWORD --http-port=$PORT
+CMD odoo --database=$DB_NAME --db_host=$DB_HOST --db_port=5432 --db_user=$DB_USER --db_password=$POSTGRES_PASSWORD --http-port=$PORT -i base
